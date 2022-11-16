@@ -5,8 +5,10 @@ const Information = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.textSyle}>React Native With Thai-Nichi</Text>
-      <Text style={{ color: "blue", fontSize: 15, fontWeight: "bold" }}>By .... Nonpawit Nittaworn</Text>
-      <Text style={[styles.textSyle,styles.warning]}>
+      <Text style={{ color: "blue", fontSize: 15, fontWeight: "bold" }}>
+        By .... Nonpawit Nittaworn
+      </Text>
+      <Text style={[styles.textSyle, styles.warning]}>
         Student ID: 1913210033
       </Text>
       <Text>Major : Multimedia Techonology</Text>
@@ -24,11 +26,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textSyle: {
-    
     fontSize: 20,
   },
-  warning :{
-    fontWeight : "bold",color: "red",
-
-  }
+  warning: {
+    fontWeight: "bold",
+    color: "red",
+  },
 });
