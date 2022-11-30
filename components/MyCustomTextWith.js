@@ -5,7 +5,7 @@ const MyCustomTextWiths = ({ fname, lname }) => {
   return (
     <View style={{ alignItems: "center" }}>
       <Text>
-        Your First Name is {fname} and Last name is {lname}{" "}
+        Your First Name is {fname} and Last name is {lname}
       </Text>
     </View>
   );
