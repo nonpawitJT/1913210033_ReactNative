@@ -6,8 +6,9 @@ import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
 import HomePost from "./screens/HomePost";
 import CreatePost from "./screens/CreatePost";
-import FirstPage from "./screens/FirstPage";
-import SecondPage from "./screens/SecondPage";
+import FirstPage from "./pages/FirstPage";
+import SecondPage from "./pages/SecondPage";
+import ThirdPage from  "./pages/ThirdPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,9 +19,9 @@ const App = () => {
         initialRouteName="FirstPage"
         screenOptions={{
           headerStyle:{
-            backgroundColor:"#FFECF6"
+            backgroundColor:"#8abaae"
           },
-          headerTintColor:"#FF73BA",
+          headerTintColor:"#FFFFFF",
           headerTitleStyle:{
             fontWeight:'bold'
           }
@@ -32,6 +33,7 @@ const App = () => {
         <Stack.Screen name="CreatePost" component={CreatePost} /> */}
         <Stack.Screen name="FirstPage" component={FirstPage} />
         <Stack.Screen name="SecondPage" component={SecondPage} />
+        <Stack.Screen name="ThirdPage" component={ThirdPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
