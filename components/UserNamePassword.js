@@ -1,61 +1,66 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  Button,
-} from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Button } from "react-native";
 import React, { useState } from "react";
+import { TextInput } from "react-native-web";
+
+
 
 const UserNamePassword = () => {
-  const [textInputName, settextInputName] = useState("");
-  const [textInputEmail, settextInputEmail] = useState("");
-  const checkTextInput = () => {
-    if (!textInputName.trim()) {
-      alert("Please Enter Name");
-      return;
-    }
-    if (!textInputEmail.trim()) {
-      alert("Please Enter Email");
-      return;
-    }
-    alert("Success");
-  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+    const checkTextInput = () => {
+        console.log(!name.trim())
+        if (!name.trim()) {
+            alert('Please Enter Name');
+            return;
+            }else if(!email.trim()){
+                alert("Please Enter Email");
+                return;
+            }else{
+                alert("Success");
+            }
+            
+    };
+    
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <TextInput
-          value={textInputName}
-          style={styles.textInputStyle}
-          placeholder={"Enter Name"}
-          onChangeText={(textInputName) => {
-            settextInputName(textInputName);
+          placeholder="Enter Your Name"
+          value={name}
+          onChangeText={(name) => {
+            setName(name);
           }}
+          style={styles.textInputStyle}
         />
         <TextInput
-          value={textInputEmail}
-          style={styles.textInputStyle}
-          placeholder={"Enter Email"}
-          onChangeText={(textInputEmail) => {
-            settextInputEmail(textInputEmail);
+          placeholder="Enter Your Email"
+          value={email}
+          onChangeText={(email) => {
+            setEmail(email);
           }}
+          style={styles.textInputStyle}
         />
-      </View>
-      <View  style={{ flex: 1 ,padding:35}}>
-        <Button title="Submit" onPress={checkTextInput} />
+        <Button
+        title="SUBMIT" color="#E0E0E0" onPress={()=>{checkTextInput()}}
+        />
       </View>
     </SafeAreaView>
   );
 };
+
+export default UserNamePassword;
+
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 35 },
+  container: {
+    flex: 1,
+    padding: 35,
+  },
+
   textInputStyle: {
     width: "100%",
-    height: 60,
+    height: 40,
     paddingHorizontal: 5,
     borderWidth: 0.5,
     marginTop: 15,
   },
 });
-export default UserNamePassword;

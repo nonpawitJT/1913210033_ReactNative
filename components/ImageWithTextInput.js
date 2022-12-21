@@ -17,18 +17,21 @@ const ImageWithTextInput = () => {
             source={require("../assets/input_username.png")}
             style={styles.imageStyle}
           />
-          <TextInput style={{ flex: 1 }}
-          placeholder = 'Enter your username here' />
+          <TextInput 
+           style={{ flex: 1 }}
+           placeholder="Enter your Name" />
         </View>
         <View style={styles.sectionStyle}>
           <Image
             source={require("../assets/input_phone.png")}
             style={styles.imageStyle}
           />
-          <TextInput style={{ flex: 1 }}
-          placeholder = 'Enter your Mobile no' />
+          <TextInput 
+           style={{ flex: 1 }}
+           placeholder="Enter your mobile number" />
         </View>
       </View>
+      ;
     </SafeAreaView>
   );
 };

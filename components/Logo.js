@@ -1,22 +1,22 @@
 import { View, Text, Button } from "react-native";
 import React from "react";
-import Users from "./Users";
 
 const Logo = () => {
-  const textLogo = "React Native by Nonpawit";
+  const textLogo = "React Native by Passawee";
   const isTH = false;
-  const showData = () => {
-    alert("Hello Duck");
-  };
+
+  const showData = ()=>{
+    alert("Hello Button");
+  }
+
   return (
-    <View style={{ justifyContent: "center", flex: 1 }}>
-      <Text>{textLogo}</Text>
+    <View style={{ flex: 1, justifyContent: "center" }}>
+      <Text>{textLogo}Logo</Text>
       {
-        // isTH && <text>ภาษาไทย</text>
-        isTH ? <text>ภาษาไทย</text> : <text>ภาษาอังกฤษ</text>
+        // isTH && <Text>ภาษาไทย</Text>
+        isTH ? <Text>ภาษาไทย</Text> : <Text>English</Text>
       }
-      <Button title="Click Me" onPress={showData} />
-      <Users />
+      <Button title="Click me" onPress={showData}/>
     </View>
   );
 };

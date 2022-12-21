@@ -3,8 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    backgroundColor: "#f2dbf2",
     alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
@@ -12,24 +13,23 @@ const styles = StyleSheet.create({
   },
   warning: {
     color: "red",
-    fontSize: 20,
   },
   normalText: {
     fontSize: 15,
-    color: "blue",
+    color: "#d6ecf1",
   },
-  container1: {
+  containerPractice1: {
     flex: 1,
     padding: 24,
     backgroundColor: "#eaeaea",
   },
-  title1: {
+  titlePractice1: {
     marginTop: 16,
     paddingVertical: 8,
     borderWidth: 4,
-    borderColor: "#20232a",
+    borderColor:"#20232a",
     borderRadius: 6,
-    backgroundColor: "#e29934",
+    backgroundColor: "#61dafb",
     color: "#20232a",
     textAlign: "center",
     fontSize: 30,

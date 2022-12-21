@@ -3,9 +3,8 @@ import {
   Text,
   View,
   SafeAreaView,
-  TouchableHighlight,
-  TouchableOpacity,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 
@@ -13,21 +12,25 @@ const Separator = () => <View style={styles.buttonIconSeparatorStyle} />;
 
 const TouchablePractice = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView>
       <View style={styles.container}>
         <TouchableOpacity style={styles.buttonFacebookStyle}>
-          <Image
-            style={styles.buttonImageIconStyle}
-            source={require("../assets/facebook.png")}
-          />
+          <View>
+            <Image
+              style={styles.buttonImageIconStyle}
+              source={require("../assets/facebook.png")}
+            />
+          </View>
           <Separator />
           <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonGPlusStyle}>
-          <Image
-            style={styles.buttonImageIconStyle}
-            source={require("../assets/google-plus.png")}
-          />
+          <View>
+            <Image
+              style={styles.buttonImageIconStyle}
+              source={require("../assets/google-plus.png")}
+            />
+          </View>
           <Separator />
           <Text style={styles.buttonTextStyle}>Login Using Google Plus</Text>
         </TouchableOpacity>

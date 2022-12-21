@@ -1,34 +1,25 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  Button,
-} from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Button } from "react-native";
 import React, { useState } from "react";
+import { TextInput } from "react-native-web";
 
-const TextInput1 = () => {
+const Txtinput1 = () => {
   const [userName, setUserName] = useState("");
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <Text>Insert any text below input</Text>
+        <Text>insert any text in below input</Text>
         <TextInput
-          value={userName}
-          onChangeText={(userName) => {
-            setUserName(userName);
-          }}
-          placeholder={"input username"}
-          style={styles.input}
+            value={userName}
+            onChangeText={(userName)=>{setUserName(userName)}}
+            placeholder={'Please Input Your User Name'}
+            style={styles.input}
         />
-        <Text style={{ color: "blue" }}>{userName}</Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default TextInput1;
+export default Txtinput1;
 
 const styles = StyleSheet.create({
   container: {
@@ -37,6 +28,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: "#ffffff",
   },
+
   input: {
     width: 250,
     height: 44,

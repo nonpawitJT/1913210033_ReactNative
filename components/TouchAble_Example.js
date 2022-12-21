@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import React from "react";
 
-const TouchableExample = () => {
+const TouchAble_Example = () => {
   const onPress = (msg) => {
-    alert("Alert for :" + msg);
+    alert("Alert for " + msg);
   };
 
   return (
@@ -18,23 +18,22 @@ const TouchableExample = () => {
       <View style={styles.container}>
         <TouchableHighlight
           style={styles.button}
-          onPress={() => onPress("TouchableHighlight Pressed")}
+          onPress={() => onPress("TouchAbleHighlight Pressed")}
         >
           <Text>Touchable Highlight</Text>
         </TouchableHighlight>
-
         <TouchableOpacity
           style={styles.button}
-          onPress={() => onPress("TouchableOpacity Pressed")}
+          onPress={() => onPress("TouchAbleHighlight Pressed")}
         >
-          <Text>TouchableOpacity</Text>
+          <Text>Touchable Highlight</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 };
 
-export default TouchableExample;
+export default TouchAble_Example;
 
 const styles = StyleSheet.create({
   container: {

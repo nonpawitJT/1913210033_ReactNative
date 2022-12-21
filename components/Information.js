@@ -4,14 +4,15 @@ import React from "react";
 const Information = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textSyle}>React Native With Thai-Nichi</Text>
+      <Text style={styles.textStyle}>React Native with TNI</Text>
       <Text style={{ color: "blue", fontSize: 15, fontWeight: "bold" }}>
-        By .... Nonpawit Nittaworn
+        By....Passawee Wanwilai
       </Text>
-      <Text style={[styles.textSyle, styles.warning]}>
-        Student ID: 1913210033
+      <Text style={[styles.textStyle,styles.warning]}>
+        Student ID: 1913210587
       </Text>
-      <Text>Major : Multimedia Techonology</Text>
+      <Text>Major: Information Technology</Text>
+      <Text style={{ fontSize: 20, fontWeight: "bold",color:"white" }}>Chob Mhee</Text>
     </View>
   );
 };
@@ -21,15 +22,15 @@ export default Information;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#add8e6",
+    backgroundColor: "#f2b8be",
     alignItems: "center",
     justifyContent: "center",
   },
-  textSyle: {
-    fontSize: 20,
+  textStyle: {
+    fontSize: 40,
   },
-  warning: {
-    fontWeight: "bold",
+  warning:{
+    fontWeight:"bold",
     color: "red",
-  },
+  }
 });
