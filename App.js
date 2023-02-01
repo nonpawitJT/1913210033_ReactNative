@@ -6,10 +6,11 @@ import {
   DrawerItem,
   DrawerItemList,
 } from "@react-navigation/drawer";
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 
 import ProductScreen from "./screens/ProductScreen";
 import DetailScreen from "./screens/DetailScreen";
@@ -41,7 +42,7 @@ function CustomDrawerContent(props) {
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <DrawerItem
-        label="Close drawer"
+        label="Close Drawer"
         onPress={() => props.navigation.closeDrawer()}
       />
     </DrawerContentScrollView>
@@ -52,7 +53,19 @@ const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
-
+function ProductStack(){
+  return(
+    <Stack.Navigator screenOptions={{
+      headerStyle:{backgroundColor:'#A9A9A9'},headerTintColor:'#ffffff',
+      headerTitleStyle:{
+        fonWeight:'bold'
+      }
+    }}>
+      <Stack.Screen name='Product' component={ProductScreen}/>
+      <Stack.Screen name='Detail' component={DetailScreen}/>
+    </Stack.Navigator>
+  )
+}
 
 function MyDrawer() {
   return (
@@ -67,7 +80,7 @@ function MyDrawer() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
       <Drawer.Screen name="Home" component={DetailScreen} />
-      <Drawer.Screen name="Product" component={ProductScreen} />
+      <Drawer.Screen name="Product" component={ProductStack} />
       {/* <Drawer.Screen name="Product" component={closeDrawer} /> */}
       
     </Drawer.Navigator>
